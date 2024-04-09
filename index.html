@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto de Vida</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<style>
+header h1 {
+    font-size: 2.5rem;
+    text-align: center; /* Centra el texto */
+    margin: 0;
+}
+/* Estilos del encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 2.5rem;
+    margin: 0;
+    text-align: center;
+}
+.h1{
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color:pink;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de las secciones */
+.section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+/* Estilos para el formulario de contacto */
+#contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite redimensionar verticalmente el área de texto */
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#form-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.hidden {
+    display: none;
+}
+.image-gallery { /* css fotos de la infancia */
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    width: 30%; /* Ajusta el tamaño de las imágenes según sea necesario */
+    transition: transform 0.3s ease;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.image-item:hover {
+    transform: scale(1.1); /* Escala la imagen al 110% al pasar el cursor */
+}
+
+
+
+/* Estilo del botón */
+#show-form {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px;
+}
+
+#show-form:hover {
+    background-color: #0056b3;
+}
+
+/* Mostrar el formulario cuando el botón está enfocado */
+#show-form:focus + #contacto {
+    display: block;
+}
+footer {
+    background-color:pink; /* Color de fondo oscuro */
+    color: #fff; /* Color del texto */
+    padding: 20px 0; /* Espaciado interior */
+    text-align: center; /* Alineación del texto */
+}
+
+footer p {
+    margin: 0; /* Eliminar el margen predeterminado del párrafo */
+}
+
+/* Estilos para los enlaces en el pie de página */
+footer a {
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Eliminar subrayado de los enlaces */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Subrayar los enlaces al pasar el ratón */
+}
+.back-to-top-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top-button:hover {
+    background-color: #0056b3;
+}
+</style>
+<body>
+    <header>
+        <div class="container">
+            <h1>Mi Proyecto de Vida</h1>
+            <nav>
+                <ul>
+                    
+                    <li><a href="#infancia">Mi infancia</a></li>
+                    
+                    <li><a href="#planes">Mis planes futuros</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+
+        <section id="infancia" class="section">
+            <div class="container">
+                <h2>Mi infancia</h2>
+                <p>Mi infancia ah sido muy movida , ya que me tuvieron a corta edad...
+                    mi infancia la vivi en la casa de mis abuelos , al principio como hija unica y poco despues con mi hermana.
+                    Estudie y pase una gran parte de esta en soacha por planes familiares ,me mude a suba , eh estudiado en el Republica Dominicana 
+                    cede b donde termine mi primaria y hice varios de mi secundaria ,me cambiaron de ceda a la que estoy ahora.
+                </p>
+                <section id="infancia" class="section">
+    <div class="container">
+        <h2>Mi infancia</h2>
+        <div class="image-gallery">
+            <div class="image-item">
+                <img src="foto1.png" alt="Imagen 1">
+            </div>
+            <div class="image-item">
+                <img src="foto2.png" alt="Imagen 2">
+            </div>
+            <div class="image-item">
+                <img src="foto3.png" alt="Imagen 3">
+            </div>
+        </div>
+    </div>
+</section>
+            </div>
+        </section>
+
+        
+        <section id="planes" class="section">
+            <div class="container">
+                <h2>Mis planes futuros</h2>
+                <p>Como planes a futuro me gustaria desempeñarme y/o aprender de todo, ya que soy una persona muy inquieta en ese aspecto,
+                    ya que en estos momentos tengo conocimientos en cuidado de la imagen (estetica) 
+                    podria decir que quisiera hacer cursos para profundizar mas en este campo...
+<a href="https://edutin.com/curso-de-peluqueria-4269">curso de peluqueria edutin</a>
+                    o en el sena...
+                    <a href="https://sofia-plus.com.co/curso-sena-peluqueria/">curso de estetica SENA</a>
+               </p>
+               <p> Otro de mis planes a futuro es tener mi propio negocio , tener estabilidad economica , casarme , y vivir tranquilamente
+               </p>
+            </div>
+        </section>
+
+       
+    </section>
+            <div class="container">
+                <h2>Contacto</h2>
+                <p>Si quieres contactarme, completa este formulario:</p>
+              <button id="show-form">Mostrar formulario de contacto</button>
+
+    
+    <section id="contacto" class="section">
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+            <div id="form-message"></div>
+           
+        </form>
+    </section>
+
+        </section>
+    </main>
+    
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mi Proyecto de Vida.Michi</p>
+              <a href="#" class="back-to-top-button">Volver al inicio</a>
+        </div>
+    </footer>
+   
+</body>
+</html>
+
